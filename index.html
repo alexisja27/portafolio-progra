@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Alexis Bernal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script defer src="rutValidation.js"></script> <!-- Nuevo script para la validación de RUT -->
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logos/images.png" alt="Logo de Alexis Bernal" id="logo">
+        </div>
+        <div class="contact-info" id="contact-info">
+            <!-- La información de contacto se insertará aquí mediante JavaScript -->
+        </div>
+    </header>
+
+    <section id="intereses">
+        <h2>Mis Intereses</h2>
+        <div class="slider">
+            <div class="slide active">
+                <img src="imagenes/colo-colo.png" alt="Interés 1">
+                <button onclick="abrirSitio('https://es.wikipedia.org/wiki/Club_Social_y_Deportivo_Colo-Colo')">Ver
+                    más</button>
+            </div>
+            <div class="slide">
+                <img src="imagenes/bmw.png" alt="Interés 2">
+                <button onclick="abrirSitio('https://es.wikipedia.org/wiki/BMW')">Ver más</button>
+            </div>
+            <div class="slide">
+                <img src="imagenes/juegos.png" alt="Interés 3">
+                <button onclick="abrirSitio('https://definicion.de/videojuego/')">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="lenguajes">
+        <h2>Mis Lenguajes</h2>
+        <div class="carousel">
+            <button class="carousel-button carousel-button--left">&lt;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide"><img src="logos/javascript.png" alt="JavaScript"></li>
+                    <li class="carousel-slide"><img src="logos/html.png" alt="HTML"></li>
+                    <li class="carousel-slide"><img src="logos/python.png" alt="Python"></li>
+                    <li class="carousel-slide"><img src="logos/sql.png" alt="SQL"></li>
+                    <li class="carousel-slide"><img src="logos/Java-Logo.png" alt="Java"></li>
+                    <li class="carousel-slide"><img src="logos/C.png" alt="C/C++"></li>
+                </ul>
+            </div>
+            <button class="carousel-button carousel-button--right">&gt;</button>
+        </div>
+    </section>
+
+    <section id="conocimientos">
+        <div class="container">
+            <h2 class="centered">Mis Conocimientos</h2>
+            <ul id="app-list" class="left-align"></ul>
+        </div>
+    </section>
+
+    <!-- Nuevo formulario para la validación de RUT -->
+    <section id="validacion-rut">
+        <div class="container">
+            <h2 class="centered">Validación de RUT</h2>
+            <form id="rutForm">
+                <label for="rut">RUT:</label>
+                <input type="text" id="rut" name="rut" placeholder="Ingrese su RUT" required>
+                <button type="button" onclick="validarRut()">Validar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- El resto del contenido del portafolio -->
+</body>
+
+</html>
